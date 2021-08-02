@@ -30,7 +30,7 @@ void main_task(intptr_t unused) {
   init_f(__FILE__);
   while(1) {
     //bluetoothに出力する
-    fprintf(bt, "debug: %d\n", i++);
+    fprintf(bt, "debug1: %d\n", i++);
     //msg_f("Forwarding...", 1);
     leftWheel.setPWM(pwm);
     rightWheel.setPWM(pwm);
