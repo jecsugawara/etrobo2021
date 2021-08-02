@@ -1,5 +1,6 @@
 /**
  * rightCourse: ver1.0
+ *   右エッジにする
  */
 #include "app.h"
 #include "util.h"
