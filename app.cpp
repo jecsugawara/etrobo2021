@@ -4,10 +4,11 @@
 #include "Motor.h"
 #include "Clock.h"
 
-#include <stdio.h>
+#include <stdio.h> //ev3_serial_open_file()
 
 using namespace ev3api;
 
+// bluetooth用
 static FILE *bt = NULL;
 
 /**
@@ -15,6 +16,7 @@ static FILE *bt = NULL;
  */
 // tag::main_task_1[]
 void main_task(intptr_t unused) {
+  //bluetooth用ファイルのオープン
   bt = ev3_serial_open_file(EV3_SERIAL_BT);
 
   Motor leftWheel(PORT_C);
@@ -27,6 +29,7 @@ void main_task(intptr_t unused) {
   int i=0;
   init_f(__FILE__);
   while(1) {
+    //bluetoothに出力する
     fprintf(bt, "debug: %d\n", i++);
     //msg_f("Forwarding...", 1);
     leftWheel.setPWM(pwm);
