@@ -1,3 +1,6 @@
+/**
+ * rightCourse: ver1.0
+ */
 #include "app.h"
 #include "util.h"
 
